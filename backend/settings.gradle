@@ -1,0 +1,9 @@
+rootProject.name = 'backend'
+include 'api'
+include 'api:ingestion-service'
+findProject(':api:ingestion-service')?.name = 'ingestion-service'
+include 'api:search-service'
+findProject(':api:search-service')?.name = 'search-service'
+include 'libraries'
+include 'full-system-tests'
+

@@ -1,0 +1,161 @@
+# Java
+
+## Compiled class files
+*.class
+
+## Log files
+*.log
+
+## BlueJ files
+*.ctxt
+
+## Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+## Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+## Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+## Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+## Java WebStart
+*.jnlp
+
+## Generated files
+out/
+*.log
+
+# .NET
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific files (Mono)
+mono_crash.*
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+.vscode/
+.vscode/*
+.vscode/.*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/c_cpp_properties.json
+.vscode/*.code-workspace
+
+# Rider
+.idea/
+.idea/*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## DotNetCore
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## CodeRush
+.cr/
+
+## StyleCop
+StyleCopReport.xml
+
+## Azure Pipelines
+.azure-pipelines/
+.azure-pipelines/*.yml
+
+## Publish Web Output
+.publish/
+
+# React
+
+## Dependencies
+node_modules/
+# Ignore all JavaScript files within `node_modules`
+**/node_modules/**/*.js
+
+## Production
+build/
+dist/
+
+## Temporary files
+tmp/
+temp/
+
+## Other
+.DS_Store
+.env
+.env.*.local
+.local
+.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React Native
+.expo/
+.expo-shared/
+
+# Jest
+coverage/
+
+# General
+
+# Folder for generated files
+out/
+gen/
+
+# Ignore yarn lock file
+yarn.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db

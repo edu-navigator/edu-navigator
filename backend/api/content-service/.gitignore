@@ -1,0 +1,40 @@
+# IDE-specific files
+.vs/
+*.suo
+*.user
+*.csproj.user
+*.sln.dotsettings
+*.unityproj
+
+# Build artifacts
+/bin/
+/obj/
+/packages/
+*.dll
+*.exe
+*.pdb
+*.nupkg
+
+# Test results
+/test-results/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# Dependency directories
+/node_modules/
+.gradle/
+
+# Java-specific files
+*.iml
+*.iws
+*.classpath
+*.idea/
+
+# Gradle-specific files
+build/
+.gradle/
