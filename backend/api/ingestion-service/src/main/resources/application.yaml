@@ -1,0 +1,21 @@
+version: 0.0.1
+app-name: Ingestion Service
+# determines aws services to access.
+aws-toggle:
+  s3: false
+  solr: false
+services:
+  s3:
+    host: "${AWS_S3_HOST}"
+  solr:
+    local: "${LOCAL_SOLR_HOST}"
+    remote: "${REMOTE_SOLR_HOST}"
+  postgres:
+    local:
+      host: "<<localhost>>"
+      user: "${LOCAL_PG_USER}"
+      password: "${LOCAL_PG_PASSWORD}"
+    remote:
+      host: "${REMOTE_PG_HOST}"
+      user: "${REMOTE_PG_USER}"
+      password: "${REMOTE_PG_PASSWORD}"
