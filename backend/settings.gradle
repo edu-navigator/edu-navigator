@@ -6,4 +6,6 @@ include 'api:search-service'
 findProject(':api:search-service')?.name = 'search-service'
 include 'libraries'
 include 'full-system-tests'
+include 'libraries:s3-manager'
+findProject(':libraries:s3-manager')?.name = 's3-manager'
 
