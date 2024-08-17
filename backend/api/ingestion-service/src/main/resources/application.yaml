@@ -5,8 +5,6 @@ aws-toggle:
   s3: false
   solr: false
 services:
-  s3:
-    host: "${AWS_S3_HOST}"
   solr:
     local: "${LOCAL_SOLR_HOST}"
     remote: "${REMOTE_SOLR_HOST}"
@@ -19,3 +17,8 @@ services:
       host: "${REMOTE_PG_HOST}"
       user: "${REMOTE_PG_USER}"
       password: "${REMOTE_PG_PASSWORD}"
+aws:
+  region: us-east-1
+  s3:
+    bucketName: bucketName
+    host: "${AWS_S3_HOST}"
