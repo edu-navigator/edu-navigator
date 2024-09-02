@@ -31,3 +31,5 @@ services:
 search_facets:
   facets_fields: ''
   solrFields:
+server:
+  port: 8082

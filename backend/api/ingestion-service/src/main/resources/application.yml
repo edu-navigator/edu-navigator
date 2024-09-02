@@ -22,3 +22,5 @@ aws:
   s3:
     bucketName: bucketName
     host: "${AWS_S3_HOST}"
+server:
+  port: 8081

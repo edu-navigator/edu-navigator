@@ -1,0 +1,15 @@
+spring:
+  application:
+   name: gateway
+server:
+  port: 9000
+services:
+  ingestion:
+    host: ${INGESTION_SERVICE_HOST}
+    path: ${INGESTION_SERVICE_PATH}
+  search:
+    host: ${SEARCH_SERVICE_HOST}
+    path: ${SEARCH_SERVICE_PATH}
+  content:
+    host: ${CONTENT_SERVICE_HOST}
+    path: ${CONTENT_SERVICE_PATH}
