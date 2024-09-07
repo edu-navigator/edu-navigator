@@ -16,6 +16,8 @@ public class RoutesConfig {
     private String searchServiceHost;
     @Value("${services.content.host}")
     private String contentServiceHost;
+    @Value("${services.auth.host}")
+    private String authServiceHost;
     //paths
     @Value("${services.ingestion.path}")
     private String ingestionPath;
@@ -23,6 +25,8 @@ public class RoutesConfig {
     private String searchPath;
     @Value("${services.content.path}")
     private String contentPath;
+    @Value("${services.auth.path}")
+    private String authPath;
     @Bean
     public RouterFunction<ServerResponse> ingestionServiceRoute(){
         return GatewayRouterFunctions.route("ingestion_service")
@@ -39,6 +43,12 @@ public class RoutesConfig {
     public RouterFunction<ServerResponse> contentServiceRoute(){
         return GatewayRouterFunctions.route("content_service")
                 .route(RequestPredicates.path(contentPath), HandlerFunctions.http(contentServiceHost))
+                .build();
+    }
+    @Bean
+    public RouterFunction<ServerResponse> authenticationServiceRoute(){
+        return GatewayRouterFunctions.route("authentication_service")
+                .route(RequestPredicates.path(authPath), HandlerFunctions.http(authServiceHost))
                 .build();
     }
 }

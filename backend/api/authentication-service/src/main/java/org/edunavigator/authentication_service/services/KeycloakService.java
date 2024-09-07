@@ -1,14 +1,18 @@
 package org.edunavigator.authentication_service.services;
 
 import jakarta.ws.rs.core.Response;
+import org.edunavigator.authentication_service.models.LoginResponse;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UsersResource;
+import org.keycloak.representations.AccessTokenResponse;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 @Service
 public class KeycloakService {
@@ -62,7 +66,8 @@ public class KeycloakService {
             throw new RuntimeException("Error registering user: " + response.getStatusInfo().toString());
         }
     }
-    public String loginUser(String username, String password) {
+
+    public LoginResponse loginUser(String username, String password) {
         Keycloak keycloak = KeycloakBuilder.builder()
                 .serverUrl(keycloakServerUrl)
                 .realm(realm)
@@ -73,9 +78,22 @@ public class KeycloakService {
                 .password(password)
                 .build();
         try {
-            return keycloak.tokenManager().getAccessToken().getToken();
+            AccessTokenResponse tokenResponse = keycloak.tokenManager().getAccessToken();
+            return new LoginResponse(tokenResponse.getToken(),tokenResponse.getRefreshToken());
         } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException("Invalid username or password");
+        }
+    }
+
+    public String logoutUser(String refreshToken){
+        Keycloak keycloak = getInstance();
+        try{
+            keycloak.tokenManager().invalidate(refreshToken);
+            return  "User logged out "+new Date();
+        }catch (Exception ex){
+            ex.printStackTrace();
+            throw new RuntimeException("Error logging out user: " + ex.getMessage());
         }
     }
 }
