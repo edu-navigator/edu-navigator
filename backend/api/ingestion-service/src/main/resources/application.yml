@@ -1,4 +1,3 @@
-version: 0.0.1
 app-name: Ingestion Service
 # determines aws services to access.
 aws-toggle:

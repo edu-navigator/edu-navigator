@@ -1,35 +1,6 @@
-version: 0.0.1
-appName: Search Service
-awsToggle:
-  s3: false
-  redis: false
-  solr: false
-services:
-  s3:
-    host: "${AWS_S3_HOST}"
-  redis:
-    local:
-      host: "redis://<remote-redis-url>:6379"
-      user: "${REMOTE_REDIS_USER}"
-      password: "${REMOTE_REDIS_PASSWORD}"
-    remote:
-      host: "redis://<remote-redis-url>:6379"
-      user: "${REMOTE_REDIS_USER}"
-      password: "${REMOTE_REDIS_PASSWORD}"
-  solr:
-    local: "${LOCAL_SOLR_HOST}"
-    remote: "${REMOTE_SOLR_HOST}"
-  postgres:
-    local:
-      host: "<<localhost>>"
-      user: "${LOCAL_PG_USER}"
-      password: "${LOCAL_PG_PASSWORD}"
-    remote:
-      host: "${REMOTE_PG_HOST}"
-      user: "${REMOTE_PG_USER}"
-      password: "${REMOTE_PG_PASSWORD}"
-search_facets:
-  facets_fields: ''
-  solrFields:
+spring:
+  application:
+  name: search-service
+
 server:
   port: 8082
