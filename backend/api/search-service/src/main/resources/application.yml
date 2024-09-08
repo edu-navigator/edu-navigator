@@ -1,6 +1,10 @@
 spring:
   application:
-  name: search-service
-
+    name: search-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/edunavigator-app-realm
 server:
   port: 8082
