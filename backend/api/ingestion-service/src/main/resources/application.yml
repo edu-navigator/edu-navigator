@@ -1,25 +1,10 @@
-app-name: Ingestion Service
-# determines aws services to access.
-aws-toggle:
-  s3: false
-  solr: false
-services:
-  solr:
-    local: "${LOCAL_SOLR_HOST}"
-    remote: "${REMOTE_SOLR_HOST}"
-  postgres:
-    local:
-      host: "<<localhost>>"
-      user: "${LOCAL_PG_USER}"
-      password: "${LOCAL_PG_PASSWORD}"
-    remote:
-      host: "${REMOTE_PG_HOST}"
-      user: "${REMOTE_PG_USER}"
-      password: "${REMOTE_PG_PASSWORD}"
-aws:
-  region: us-east-1
-  s3:
-    bucketName: bucketName
-    host: "${AWS_S3_HOST}"
+spring:
+  application:
+    name: ingestion
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/edunavigator-app-realm
 server:
   port: 8081
