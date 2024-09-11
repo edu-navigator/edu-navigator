@@ -1,0 +1,53 @@
+//School Fields
+
+ExcelField,FieldName,Type, index
+
+1. NatEmis,NationalEmisNumber,  Number, 0
+
+2. DataYear, LoadYear, Number, 1
+
+3. Province, Province, string, 2
+
+4. Official_Institution_Name, InstitutionName, string, 4
+
+5. Status, Status, string , 5
+
+6. Sector, Sector, string, 6
+
+7. Type_DoE, TypeOfDOE, string, 7
+
+8. Phase_PED, Phase, string, 8
+
+9. Specialisation, Specialisation, string, 9
+
+10. ElDistrict, District, string, 10
+
+11. OwnerLand, LandOwner, string, 12
+
+12. ExtDept, ExtendedDepartment, string, 13
+
+13. ExamCenter, ExamCentre, string ,18
+
+14. GIS_Longitude, GIS_longitude, Number , 19
+
+15. GIS_Latitude, GIS_Latitude, Number , 20
+
+16. DMunName, DistrictMunName, string, 21
+
+17. StreetAddress, StreetAddress, string, 30
+
+18. PostalAddress, PostalAddress, string, 31
+
+19. Telephone, Telephone, string, 32
+
+20. Quintile, Quintile, string, 35,
+
+21. Registration_Date, RegistrationDate, string/date, 38
+
+23. NoFeeSchool, NoFeeSchool, string/boolean, 39
+
+24. Urban_Rural, AreaType, string, 40,
+
+25. Learners2023, NumberOfLearners, number, 46
+
+26. Educators2023, NumberOfTeachers, number, 47

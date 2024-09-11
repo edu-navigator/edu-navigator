@@ -1,0 +1,16 @@
+{
+    schoolId,
+    natEmis,
+    institutionName,
+    province,
+    status,
+    sector,
+    typeOfDoe,
+    phase,
+    specialisation,
+    district,
+    examCentre,
+    streetAddress,
+    noFeeSchool,
+    areaType
+}
