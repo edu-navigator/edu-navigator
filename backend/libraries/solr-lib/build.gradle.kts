@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "co.za.edu-navigator"
+group = "org.edunavigator"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.solr:solr-solrj:9.7.0")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
