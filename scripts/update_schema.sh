@@ -1,6 +1,6 @@
 CONTAINER_NAME="my_solr"
 CORE_NAME="schools"
-LOCAL_SCHEMA_PATH="../backend/config/solr/dev/schools/managed-schema.xml"
+LOCAL_SCHEMA_PATH="../backend/config/solr/schools/managed-schema.xml"
 CONTAINER_SCHEMA_PATH="var/solr/data/${CORE_NAME}/conf/managed-schema.xml"
 
 # Copy the schema from local to Docker container

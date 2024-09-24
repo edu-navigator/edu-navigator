@@ -30,7 +30,7 @@ public class SchoolSolrBean {
     @Field
     private String areaType;
     public static class  Builder{
-        private SchoolSolrBean school;
+        private SchoolSolrBean school = new SchoolSolrBean();
         public Builder setSchoolUUID(String uuid){
             this.school.schoolUUID = uuid;
             return this;

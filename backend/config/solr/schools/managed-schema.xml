@@ -453,7 +453,7 @@
     <field name="_version_" type="plong" indexed="false" stored="false"/>
     <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
     <!-- Start:   EduNavigator Fields-->
-    <field name="schoolId" type="string" indexed="true" stored="true" required="true"/>
+    <field name="schoolUUID" type="string" indexed="true" stored="true" required="true"/>
     <field name="natEmis" type="string" indexed="true" stored="true" required="true"/>
     <field name="institutionName" type="text_general" indexed="true" stored="true"/>
     <field name="province" type="string" indexed="true" stored="true"/>
@@ -467,6 +467,13 @@
     <field name="streetAddress" type="text_general" indexed="true" stored="true"/>
     <field name="noFeeSchool" type="boolean" indexed="true" stored="true"/>
     <field name="areaType" type="string" indexed="true" stored="true"/>
+    <field name="search_all" type="text_general" indexed="true" stored="false"/>
+
+    <copyField source="institutionName" dest="search_all"/>
+    <copyField source="province" dest="search_all"/>
+    <copyField source="district" dest="search_all"/>
+    <copyField source="streetAddress" dest="search_all"/>
+    <copyField source="examCentre" dest="search_all"/>
     <!-- End:   EduNavigator Fields-->
     <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
     <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>

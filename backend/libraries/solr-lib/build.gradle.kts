@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation("org.apache.solr:solr-solrj:9.7.0")
+    implementation("org.springframework:spring-context:6.1.12")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
