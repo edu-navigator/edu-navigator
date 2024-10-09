@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script{
+                    checkout([
+                            $class: 'GitSCM',
+                            branches: [[name: '*/main']],
+                            doGenerateSubmoduleConfigurations: false,
+                            extensions: [],
+                            submoduleCfg: [],
+                            userRemoteConfigs:
+                            [[
+                                  url: 'https://github.com/edu-navigator/edu-navigator.git',
+                                  credentialsId: 'github-credentials-id'
+                            ]]
+                    ])
+                }
+            }
+        }
+
+        stage('List Files') {
+                steps {
+                        script {
+                            // List the files in the workspace
+                            sh 'echo "Files in workspace:"'
+                            sh 'ls -R'
+                            sh 'docker --version'
+
+                   }
+              }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}

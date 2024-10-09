@@ -16,4 +16,6 @@ include 'libraries:security-config-lib'
 findProject(':libraries:security-config-lib')?.name = 'security-config-lib'
 include 'libraries:solr-lib'
 findProject(':libraries:solr-lib')?.name = 'solr-lib'
+include 'libraries:database-lib'
+findProject(':libraries:database-lib')?.name = 'database-lib'
 

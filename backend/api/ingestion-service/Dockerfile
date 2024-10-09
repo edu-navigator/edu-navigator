@@ -1,4 +1,4 @@
-ARG JDK_IMAGE="openjdk:17"
+ARG JDK_IMAGE="amazoncorretto:17.0.12"
 
 FROM ${JDK_IMAGE}
 
