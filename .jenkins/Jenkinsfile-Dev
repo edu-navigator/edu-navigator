@@ -1,7 +1,11 @@
 pipeline {
+
     agent any
 
+
+
     stages {
+
         stage('Checkout') {
             steps {
                 script{
@@ -22,24 +26,23 @@ pipeline {
         }
 
         stage('List Files') {
-                steps {
+                    steps {
                         script {
                             // List the files in the workspace
                             sh 'echo "Files in workspace:"'
                             sh 'ls -R'
-                            sh 'docker --version'
+                            sh  'docker --version'
+                        }
+                }
+        }
 
-                   }
-              }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+        stage('Build Images'){
+
+            steps{
+                dir('backend/api/search-service'){
+                    echo 'Building Image: Search Service'
+                    sh 'docker build -t authentication-service-jenkins'
+                }
             }
         }
     }
