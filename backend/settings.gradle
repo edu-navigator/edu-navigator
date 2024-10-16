@@ -18,4 +18,6 @@ include 'libraries:solr-lib'
 findProject(':libraries:solr-lib')?.name = 'solr-lib'
 include 'libraries:database-lib'
 findProject(':libraries:database-lib')?.name = 'database-lib'
+include 'libraries:datastore'
+findProject(':libraries:datastore')?.name = 'datastore'
 

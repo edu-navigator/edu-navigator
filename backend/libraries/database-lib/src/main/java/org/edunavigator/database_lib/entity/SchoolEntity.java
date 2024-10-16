@@ -1,84 +1,31 @@
 package org.edunavigator.database_lib.entity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
 import java.time.LocalDate;
 public class SchoolEntity {
-    @Id
-    @Column(name = "school_uuid", nullable = false, unique = true)
     private String schoolUUID;
-    @Column(name = "national_emis_number", nullable = false, unique = true)
     private String nationalEmisNumber;
-
-    @Column(name = "data_year")
     private String dataYear;
-
-    @Column(name = "province")
     private String province;
-
-    @Column(name = "institution_name")
     private String institutionName;
-
-    @Column(name = "status")
     private String status;
-
-    @Column(name = "sector")
     private String sector;
-
-    @Column(name = "type_of_doe")
     private String typeOfDoe;
-
-    @Column(name = "phase")
     private String phase;
-
-    @Column(name = "specialisation")
     private String specialisation;
-
-    @Column(name = "district")
     private String district;
-
-    @Column(name = "land_owner")
     private String landOwner;
-
-    @Column(name = "extended_department")
     private String extendedDepartment;
-
-    @Column(name = "exam_centre")
     private String examCentre;
-
-    @Column(name = "gis_longitude")
     private Double gisLongitude;
-
-    @Column(name = "gis_latitude")
     private Double gisLatitude;
-
-    @Column(name = "district_mun_name")
     private String districtMunName;
-
-    @Column(name = "street_address")
     private String streetAddress;
-
-    @Column(name = "postal_address")
     private String postalAddress;
-
-    @Column(name = "telephone")
     private String telephone;
-
-    @Column(name = "quintile")
     private String quintile;
-
-    @Column(name = "registration_date")
     private LocalDate registrationDate;
-
-    @Column(name = "no_fee_school")
     private Boolean noFeeSchool;
-
-    @Column(name = "area_type")
     private String areaType;
-
-    @Column(name = "number_of_learners")
     private Integer numberOfLearners;
-
-    @Column(name = "number_of_teachers")
     private Integer numberOfTeachers;
 
     public SchoolEntity(String schoolUUID, String nationalEmisNumber,
