@@ -17,7 +17,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation(project(":libraries:s3-manager"))
     implementation(project(":libraries:security-config-lib"))
-    implementation(project(":libraries:database-lib"))
+    implementation(project(":libraries:core"))
     implementation(project(":libraries:solr-lib"))
     implementation ("org.apache.poi:poi-ooxml:5.2.2")
     implementation ("org.apache.poi:poi:5.2.2")
