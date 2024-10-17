@@ -2,7 +2,7 @@ package org.edunavigator.ingestion.utils;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.edunavigator.database_lib.entity.SchoolEntity;
+import org.edunavigator.core.School;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.InputStream;
 import java.time.LocalDate;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 public class ExcelReader {
 
-    public static List<SchoolEntity>  read(MultipartFile excelFile){
-        List<SchoolEntity> schools = new ArrayList<>();
+    public static List<School>  read(MultipartFile excelFile){
+        List<School> schools = new ArrayList<>();
 
         try(InputStream inputStream = excelFile.getInputStream())
         {
@@ -46,7 +46,7 @@ public class ExcelReader {
                 String numberOfLearners = getCellValue(row.getCell(IndexMapper.NUMBER_OF_LEARNERS));
                 String numberOfTeachers = getCellValue(row.getCell(IndexMapper.NUMBER_OF_TEACHERS));
 
-                SchoolEntity school = new SchoolEntity();
+                School school = new School();
                 school.setNationalEmisNumber(nationalEmisNumber);
                 school.setDataYear(dataYear);
                 school.setProvince(province);
