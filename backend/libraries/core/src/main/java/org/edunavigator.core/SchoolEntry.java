@@ -3,6 +3,11 @@ public class SchoolEntry {
     private School school;
     private SchoolHistory schoolHistory;
 
+    public SchoolEntry(School school, SchoolHistory schoolHistory) {
+        this.school = school;
+        this.schoolHistory = schoolHistory;
+    }
+
     public School getSchool() {
         return school;
     }

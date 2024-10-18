@@ -2,7 +2,7 @@ package org.edunavigator.datastore.utils;
 
 public class DynamodbSchoolKeyMapper {
     public static String SCHOOL_UUID="schoolUUID";
-    public static final String NATIONAL_EMIS_NUMBER = "nationalEmisNumber";
+    public static final String NATIONAL_EMIS_NUMBER = "natEmis";
     public static final String DATA_YEAR = "dataYear";
     public static final String PROVINCE = "province";
     public static final String INSTITUTION_NAME = "institutionName";

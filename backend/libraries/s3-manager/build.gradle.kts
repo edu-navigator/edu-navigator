@@ -12,10 +12,8 @@ repositories {
 }
 
 dependencies {
-    implementation(platform("software.amazon.awssdk:bom:2.20.56"))
+    implementation(platform("software.amazon.awssdk:bom:2.28.22"))
     implementation("software.amazon.awssdk:s3")
-    implementation("software.amazon.awssdk:sso")
-    implementation("software.amazon.awssdk:ssooidc")
 
     testImplementation ("org.mockito:mockito-core:3.+")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))

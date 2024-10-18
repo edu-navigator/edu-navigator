@@ -12,7 +12,7 @@ public class DynamodbMapper {
         HashMap<String, AttributeValue> itemValues = new HashMap<>();
 
         itemValues.put(DynamodbSchoolKeyMapper.SCHOOL_UUID, AttributeValue.builder().s(school.getSchoolUUID()).build());
-        itemValues.put(DynamodbSchoolKeyMapper.NATIONAL_EMIS_NUMBER, AttributeValue.builder().s(school.getNationalEmisNumber()).build());
+        itemValues.put(DynamodbSchoolKeyMapper.NATIONAL_EMIS_NUMBER, AttributeValue.builder().n(school.getNationalEmisNumber()).build());
         itemValues.put(DynamodbSchoolKeyMapper.DATA_YEAR, AttributeValue.builder().s(school.getDataYear()).build());
         itemValues.put(DynamodbSchoolKeyMapper.PROVINCE, AttributeValue.builder().s(school.getProvince()).build());
         itemValues.put(DynamodbSchoolKeyMapper.INSTITUTION_NAME, AttributeValue.builder().s(school.getInstitutionName()).build());
