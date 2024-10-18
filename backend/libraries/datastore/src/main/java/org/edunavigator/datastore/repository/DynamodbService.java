@@ -9,6 +9,7 @@ public class DynamodbService {
     private final DynamoDbClient dClient;
     private final String SCHOOL_TABLE = "school";
     private final String SCHOOL_HISTORY_TABLE = "schoolHistory";
+
     public DynamodbService(DynamoDbClient dClient) {
         this.dClient = dClient;
     }
