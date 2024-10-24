@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
 
 
@@ -16,6 +17,12 @@ dependencies {
     testImplementation "org.mockito:mockito-core:3.+"
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+ext {
+    awsSdkVersion = "2.28.22"
+    jedisVersion = "5.2.0"
+    junitBomVersion = "5.10.0"
 }
 
 test {

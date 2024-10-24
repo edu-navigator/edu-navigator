@@ -6,6 +6,17 @@ public class SchoolHistory {
     private Integer numberOfLearners;
     private Integer numberOfTeachers;
 
+    public SchoolHistory() {
+    }
+
+    public SchoolHistory(String historyUUID, String schoolUUID, String year, Integer numberOfLearners, Integer numberOfTeachers) {
+        this.historyUUID = historyUUID;
+        this.schoolUUID = schoolUUID;
+        this.year = year;
+        this.numberOfLearners = numberOfLearners;
+        this.numberOfTeachers = numberOfTeachers;
+    }
+
     public String getHistoryUUID() {
         return historyUUID;
     }

@@ -20,4 +20,5 @@ include 'libraries:datastore'
 findProject(':libraries:datastore')?.name = 'datastore'
 include 'libraries:core'
 findProject(':libraries:core')?.name = 'core'
+include 'engine'
 
